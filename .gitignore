@@ -1,0 +1,391 @@
+# ===================================================================
+# CINERECOMMEND - GITIGNORE
+# Système de Recommandation de Films Intelligent
+# ===================================================================
+
+# ===================================================================
+# PYTHON
+# ===================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ===================================================================
+# DATA SCIENCE & ML
+# ===================================================================
+
+# Large datasets
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+
+# Trained models
+*.model
+*.h5
+*.pb
+*.onnx
+*.pt
+*.pth
+*.bin
+*.safetensors
+models/
+checkpoints/
+weights/
+
+# Jupyter notebook outputs
+*.ipynb
+!notebooks/*.ipynb
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+logs/
+tensorboard_logs/
+
+# ===================================================================
+# DATABASES
+# ===================================================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ===================================================================
+# CONFIGURATION & SECRETS
+# ===================================================================
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Configuration files with secrets
+config/secrets.yaml
+config/local.yaml
+config/production.yaml
+secrets/
+
+# API keys
+*.key
+*.pem
+*.crt
+*.p12
+api_keys.txt
+credentials.json
+
+# ===================================================================
+# DOCKER
+# ===================================================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# ===================================================================
+# CLOUD & DEPLOYMENT
+# ===================================================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kubeconfig
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+service-account-key.json
+
+# Azure
+.azure/
+
+# ===================================================================
+# DEVELOPMENT TOOLS
+# ===================================================================
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================================================
+# TEMPORARY & CACHE
+# ===================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Cache directories
+cache/
+.cache/
+tmp/
+temp/
+
+# ===================================================================
+# LOGS & MONITORING
+# ===================================================================
+
+# Log files
+*.log
+logs/
+*.out
+*.err
+
+# Monitoring
+prometheus_data/
+grafana_data/
+
+# ===================================================================
+# STREAMLIT
+# ===================================================================
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===================================================================
+# FASTAPI
+# ===================================================================
+
+# FastAPI
+.pytest_cache/
+
+# ===================================================================
+# PROJECT SPECIFIC
+# ===================================================================
+
+# Large data files (keep samples)
+data/raw/*.csv
+data/processed/*.csv
+!data/processed/*sample*.csv
+!data/processed/movies_sample.csv
+!data/processed/ratings_sample.csv
+
+# Model files
+data/models/*.pkl
+data/models/*.joblib
+data/models/*.model
+
+# Results and outputs
+results/
+outputs/
+experiments/
+
+# User uploads
+uploads/
+
+# ===================================================================
+# KEEP THESE FILES
+# ===================================================================
+
+# Keep sample data
+!data/processed/movies_sample.csv
+!data/processed/ratings_sample.csv
+
+# Keep documentation
+!docs/
+!*.md
+!*.rst
+
+# Keep configuration templates
+!config/config.yaml.template
+!.env.example
+
+# Keep Docker files
+!Dockerfile
+!docker-compose.yml
+!.dockerignore
+
+# Keep CI/CD
+!.github/
+!.gitlab-ci.yml
+
+# ===================================================================
+# NOTES
+# ===================================================================
+#
+# Ce .gitignore est conçu pour:
+# 1. Exclure les fichiers sensibles (clés API, mots de passe)
+# 2. Exclure les gros fichiers de données
+# 3. Garder les fichiers d'exemple nécessaires
+# 4. Maintenir la fonctionnalité du projet
+# 5. Permettre le déploiement facile
+#
+# Pour forcer l'ajout d'un fichier exclu:
+# git add -f fichier_exclu
+#
+# Pour voir les fichiers ignorés:
+# git status --ignored
+# ===================================================================
